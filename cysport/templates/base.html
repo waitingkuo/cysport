@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <title>CY-Sport</title>
+
+    <!-- Scripts -->
+    {% assets "js_common" %}
+      <script src="{{ ASSET_URL }}"></script>
+    {% endassets %}
+
+    <!-- CSS -->
+    {% assets "css_common" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}"> 
+    {% endassets %}
+
+    {% assets "css_base" %}
+      <link rel="stylesheet" href="{{ ASSET_URL }}"> 
+    {% endassets %}
+
+    {% block head %}{% endblock %}
+
+  </head>
+
+  <body>
+    <!-- Nav bar - Begin -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+      <!-- Header -->
+      <div class="navar-header">
+        <a class="navbar-brand" href="/">CYSPORT</a>
+      </div>
+
+      <!-- Links -->
+      <ul class="nav navbar-nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="#">A-LINE</a></li>
+        <li><a href="#">B-LINE</a></li>
+        <li><a href="#">C-LINE</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+
+      
+    </nav>
+
+    <br/>
+    <br/>
+    <br/>
+
+    <!-- Nav bar - End -->
+
+    <!-- Content -->
+    {% block content %}{% endblock %}
+
+    <!-- Footer -->
+    <footer id="footer" style="background-color: black;">
+      <div class="container" style="color: white;">
+        <p>copyright c all rights reserved</p>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
