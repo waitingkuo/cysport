@@ -1,4 +1,23 @@
 /* line 1 */
+#nav {
+  background-color: white;
+}
+/* line 7 */
+#nav .navbar-brand .brand-cy {
+  color: #ffa500;
+}
+/* line 10 */
+#nav .navbar-brand .brand-sport {
+  color: black;
+}
+/* line 16 */
+#nav .navbar-nav a {
+  color: black;
+}
+
+/* line 20 */
 #footer {
   height: 30px;
+  line-height: 30px;
+  text-align: center;
 }

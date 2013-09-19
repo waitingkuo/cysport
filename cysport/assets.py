@@ -7,13 +7,19 @@ js_common = Bundle(
 
 css_common = Bundle(
     'common/css/bootstrap.css',
-    'common/css/bootstrap-theme.css',
+    #'common/css/bootstrap-theme.css',
 )
 
 css_base = Bundle(
     'site/scss/base.scss',
     filters='scss',
     output='site/css/base.css',
+)
+
+css_index = Bundle(
+    'site/scss/index.scss',
+    filters='scss',
+    output='site/css/index.css',
 )
 
 def register_assets(app):
@@ -26,6 +32,7 @@ def register_assets(app):
     assets.register('js_common', js_common)
     assets.register('css_common', css_common)
     assets.register('css_base', css_base)
+    assets.register('css_index', css_index)
 
     # Init App
     assets.init_app(app)

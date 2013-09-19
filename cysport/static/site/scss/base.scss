@@ -1,3 +1,27 @@
+// nav
+#nav {
+
+  background-color: white;
+
+  // brand
+  .navbar-brand {
+    .brand-cy {
+      color: #ffa500;
+    }
+    .brand-sport {
+      color: black;
+    }
+  }
+
+  // navs
+  .navbar-nav a {
+    color: black;
+  }
+}
+
+// footer
 #footer {
   height: 30px;
+  line-height: 30px;
+  text-align: center;
 }
