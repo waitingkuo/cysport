@@ -1,15 +1,15 @@
-/* line 1 */
+/* line 2 */
 #welcome {
   height: 300px;
 }
 
-/* line 5 */
+/* line 7 */
 #new-products {
   background-color: #ffa500;
   padding: 25px 40px 25px 40px;
   position: relative;
 }
-/* line 11 */
+/* line 14 */
 #new-products .header {
   width: 120px;
   height: 25px;

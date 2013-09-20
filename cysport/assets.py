@@ -22,6 +22,12 @@ css_index = Bundle(
     output='site/css/index.css',
 )
 
+css_a_line = Bundle(
+    'site/scss/a-line.scss',
+    filters='scss',
+    output='site/css/a-line.css',
+)
+
 def register_assets(app):
     """ Register Assets to the app """
 
@@ -33,6 +39,7 @@ def register_assets(app):
     assets.register('css_common', css_common)
     assets.register('css_base', css_base)
     assets.register('css_index', css_index)
+    assets.register('css_a_line', css_a_line)
 
     # Init App
     assets.init_app(app)

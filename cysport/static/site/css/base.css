@@ -1,21 +1,21 @@
-/* line 1 */
+/* line 2 */
 #nav {
   background-color: white;
 }
-/* line 7 */
+/* line 8 */
 #nav .navbar-brand .brand-cy {
   color: #ffa500;
 }
-/* line 10 */
+/* line 11 */
 #nav .navbar-brand .brand-sport {
   color: black;
 }
-/* line 16 */
+/* line 17 */
 #nav .navbar-nav a {
   color: black;
 }
 
-/* line 20 */
+/* line 23 */
 #footer {
   height: 30px;
   line-height: 30px;
