@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block head %}
+  {% assets "css_product_line" %}
+    <link rel="stylesheet" href="{{ ASSET_URL }}"> 
+  {% endassets %}
+{% endblock %}
+
+{% block content %}
+
+
+
+  <!-- A-Line -->
+  <div id="{{ id }}" class="product-line">
+
+    <!-- Header -->
+    <header> 
+      <div class="container">
+        <h1>{{ page_header }}</h1>
+      </div>
+    </header>
+
+    <!-- Product - Begin -->
+    <div class="product-large">
+      <div class="container">
+        <div class="row">
+
+          <div class="tab-content">
+            {% for product in products %}
+            <div class="tab-pane {% if loop.first %}active{% endif %}" id="product-{{ loop.index }}">
+              <!-- Pic -->
+              <div class="col-lg-6 pic">
+                <img src="{{ product.pic }}">
+              </div>
+
+              <!-- Detail -->
+              <div class="col-lg-6 details">
+                <h2>{{ product.name }}</h2>
+                <p>{{ product.description }}</p>
+                <div class="row">
+                  <div class="col-lg-3 field">SIZE</div>
+                  <div class="col-lg-3 field">WIDTH</div>
+                  <div class="col-lg-3 field">MADE</div>
+                  <div class="col-lg-3 field">...</div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 field">F</div>
+                  <div class="col-lg-3 field">105cm</div>
+                  <div class="col-lg-3 field">Taiwan</div>
+                  <div class="col-lg-3 field">:!</div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div>
+
+        </div>
+    </div>
+  </div>
+  <!-- Product - End -->
+
+
+  <!-- Products - Begin -->
+  <div class="products">
+    <div class="container">
+      <div class="row">
+        {% for product in products %}
+        <div class="col-lg-3 product-small">
+          <a data-toggle="tab" href="#product-{{loop.index}}" class="thumbnail">
+            <img src="{{ product.pic }}">
+            <h3>{{ product.name }}</h3>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- Products - End -->
+  
+
+
+{% endblock %}
+
+

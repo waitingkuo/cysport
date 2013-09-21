@@ -6,5 +6,25 @@ def index():
     return render_template('index.html')
 
 @app.route('/a-line')
+@app.route('/b-line')
+@app.route('/c-line')
 def a_line():
-    return render_template('a-line.html')
+
+    products = []
+    for i in range(1,9):
+        products.append({
+          'name': 'TUTU Product %s' % i,
+          'description': 'shooboo shooboo',
+          'size': 'L',
+          'width': '%scm' % (100+i),
+          'pic': 'http://placehold.it/600x300&text=Product%s' % i,
+        })
+
+
+    args = {
+        'id': 'a-line',
+        'page_header': 'A-Line',
+        'products': products,
+    }
+
+    return render_template('product-line.html', **args)
