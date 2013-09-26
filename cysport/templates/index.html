@@ -11,14 +11,22 @@
   <!-- Welcome -->
   <div id="welcome">
     <div class="container">
-      <h1>It all starts with turtles.</h1>
-      <p>
-        We deliver the highest user experience for you and clients.
-        Out creative design and development solutions are second to none.
-      </p>
+			<div class="col-lg-8">
+				<h1>It all starts with turtles.</h1>
+				<p>
+					We deliver the highest user experience for you and clients.
+					Out creative design and development solutions are second to none.
+				</p>
+			</div>
+			<div class="col-lg-4 pic">
+				<div class="thumbnail">
+					<img src="http://placehold.it/300x300&text=TURTLE">
+				</div>
+			</div>
+			
     </div>
-
   </div>
+	
 
   <!-- New Products -->
   <div id="new-products">
@@ -31,10 +39,10 @@
       <!-- Products -->
       <div class="row">
 
-        {% for i in range(3) %}
-        <div class="col-md-4 col-lg-4">
+        {% for product in products %}
+        <div class="col-lg-4">
           <a href="#" class="thumbnail product">
-            <img src="http://placehold.it/280x150">
+						<img src="{{ product.pic }}">
             <!--
             <div class="pull-left">5/27</div>
             <div class="pull-left">More</div>
